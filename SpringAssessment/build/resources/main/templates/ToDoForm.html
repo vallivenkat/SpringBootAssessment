@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO Form</title>
+    <link rel="stylesheet" href="css/ToDoStyle.css">
+
+</head>
+<body>
+
+        <div th:insert="fragments/navbar.html :: navbar"></div>
+
+
+
+        <div class="todoBody">
+            <div class="container">
+                <h1>New TODO item</h1>
+                <form onsubmit="event.preventDefault(); submitForm()">
+                    <div class="form-group">
+                        <label for="newItemTitle">Title</label>
+                        <input type="text" class="form-control" id="newItemTitle"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newItemDescription">Description</label>
+                        <input type="textarea" class="form-control" id="newItemDescription"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newItemTargetDate">TargetDate</label>
+                        <input type="date" class="form-control" id="newItemTargetDate" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    <script src="js/ToDoController.js"></script>
+    <script src="js/ToDoForm.js"></script>
+</body>
+</html>
